@@ -5,6 +5,9 @@ const theme = createTheme({
   typography: {
     fontFamily: "DouyinSansBold",
   },
+  palette: {
+    mode: "light",
+  },
 });
 
 export default theme;
