@@ -13,7 +13,7 @@ export default function OSAppBar() {
         className="flex flex-row justify-between items-center"
         variant="regular"
       >
-        <Typography variant="h6">One Storage</Typography>
+        <Typography variant="h6">One Store</Typography>
         <div className="flex flex-row items-center">
           <Autocomplete
             className="w-44 -mt-3.5"
