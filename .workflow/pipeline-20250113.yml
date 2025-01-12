@@ -21,7 +21,7 @@ stages:
         repository: crpi-0lte4oc0s41r9qw7.cn-hangzhou.personal.cr.aliyuncs.com
         username: moonfeather
         password: daohaokechi12345
-        tag: One-Store:v0.${GITEE_PIPELINE_BUILD_NUMBER}
+        tag: one-store:v0.${GITEE_PIPELINE_BUILD_NUMBER}
         dockerfile: ./Dockerfile
         context: ''
         artifacts: []
