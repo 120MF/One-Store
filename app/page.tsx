@@ -1,9 +1,9 @@
-import UploadButton from "@/components/UploadButton";
+import BorrowedPieChart from "@/components/BorrowedPieChart";
 
 export default function Home() {
   return (
-    <div className="p-5 flex justify-center">
-      <UploadButton />
+    <div className="w-full flex pt-5 justify-center">
+      <BorrowedPieChart />
     </div>
   );
 }
