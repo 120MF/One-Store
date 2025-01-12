@@ -1,0 +1,32 @@
+version: '1.0'
+name: pipeline-20250113
+displayName: docker_build
+triggers:
+  trigger: auto
+  push:
+    branches:
+      prefix:
+        - ''
+stages:
+  - name: stage-431c873c
+    displayName: docker build
+    strategy: naturally
+    trigger: auto
+    executor: []
+    steps:
+      - step: build@docker
+        name: build_docker
+        displayName: 镜像构建
+        type: account
+        repository: docker.io
+        username: moonfeather
+        password: daohaokechi12345
+        tag: one-store:${GITEE_PIPELINE_BUILD_NUMBER}
+        dockerfile: ./Dockerfile
+        context: ''
+        artifacts: []
+        isCache: true
+        parameter: {}
+        notify: []
+        strategy:
+          retry: '0'
