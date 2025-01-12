@@ -18,7 +18,7 @@ stages:
         name: build_docker
         displayName: 镜像构建
         type: account
-        repository: docker.io
+        repository: registry.cn-hangzhou.aliyuncs.com
         username: moonfeather
         password: daohaokechi12345
         tag: one-store:${GITEE_PIPELINE_BUILD_NUMBER}
