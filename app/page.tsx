@@ -1,9 +1,9 @@
-import { Button } from "@mui/material";
+import UploadButton from "@/components/UploadButton";
 
 export default function Home() {
   return (
     <div className="p-5 flex justify-center">
-      <Button>图表</Button>
+      <UploadButton />
     </div>
   );
 }
