@@ -3,10 +3,6 @@ name: pipeline-20250113
 displayName: docker_build
 triggers:
   trigger: auto
-  push:
-    branches:
-      prefix:
-        - ''
 stages:
   - name: stage-431c873c
     displayName: docker build
