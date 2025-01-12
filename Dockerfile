@@ -1,4 +1,4 @@
-FROM docker.1panel.live/node:22-alpine AS base
+FROM registry.dockermirror.com/node:22-alpine AS base
 
 FROM base AS builder
 
