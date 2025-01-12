@@ -22,7 +22,7 @@ export default function RootLayout({
         <AppRouterCacheProvider>
           <ThemeProvider theme={theme}>
             <OSAppBar />
-            <div className="overflow-y-scroll overflow-x-hidden pt-12 pb-16">
+            <div className="overflow-y-scroll overflow-x-hidden pt-16 pb-16">
               {children}
             </div>
             <footer>
