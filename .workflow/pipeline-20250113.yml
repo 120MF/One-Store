@@ -19,7 +19,7 @@ stages:
         displayName: 镜像构建
         type: account
         repository: crpi-0lte4oc0s41r9qw7.cn-hangzhou.personal.cr.aliyuncs.com
-        username: moonfeather
+        username: moonbite
         password: daohaokechi12345
         tag: one-store:v0.${GITEE_PIPELINE_BUILD_NUMBER}
         dockerfile: ./Dockerfile
