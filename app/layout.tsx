@@ -18,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="zh-CN">
-      <body className="h-screen antialiased bg-white">
+      <body className="antialiased bg-white">
         <AppRouterCacheProvider>
           <ThemeProvider theme={theme}>
             <OSAppBar />
