@@ -4,18 +4,18 @@ import * as React from "react";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import { Autocomplete, IconButton, TextField, Typography } from "@mui/material";
-import SearchIcon from '@mui/icons-material/Search';
-import QrCodeScannerIcon from "@mui/icons-material/QrCodeScanner";
+import SearchIcon from "@mui/icons-material/Search";
+import AddIcon from "@mui/icons-material/Add";
 
 export default function OSAppBar() {
   return (
-    <AppBar position="static">
+    <AppBar position="fixed">
       <Toolbar
         className="flex flex-row justify-between items-center"
         variant="regular"
       >
         <Typography variant="h5">One Store</Typography>
-        <div className="flex flex-row items-center gap-0 pr-1">
+        <div className="flex flex-row items-center gap-0 -mr-1">
           {/*<Autocomplete*/}
           {/*  className="w-44 -mt-3.5"*/}
           {/*  renderInput={(params) => (*/}
@@ -28,10 +28,10 @@ export default function OSAppBar() {
           {/*  options={[]}*/}
           {/*/>*/}
           <IconButton aria-label="delete" size="large">
-              <SearchIcon />
+            <SearchIcon />
           </IconButton>
           <IconButton aria-label="delete" size="large">
-            <QrCodeScannerIcon />
+            <AddIcon />
           </IconButton>
         </div>
       </Toolbar>

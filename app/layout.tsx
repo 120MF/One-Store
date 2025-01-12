@@ -17,13 +17,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="zh-CN">
-      <body className="antialiased bg-white">
+    <html suppressHydrationWarning lang="zh-CN">
+      <body className="antialiased bg-white h-full">
         <AppRouterCacheProvider>
           <ThemeProvider theme={theme}>
             <OSAppBar />
-            {children}
-            <MobileFooter />
+            <div className="overflow-y-scroll overflow-x-hidden pt-12 pb-16">
+              {children}
+            </div>
+            <footer>
+              <MobileFooter />
+            </footer>
           </ThemeProvider>
         </AppRouterCacheProvider>
       </body>

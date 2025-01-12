@@ -4,7 +4,6 @@ import {
   BottomNavigation,
   BottomNavigationAction,
   Box,
-  CssBaseline,
   Paper,
 } from "@mui/material";
 import HomeIcon from "@mui/icons-material/Home";
@@ -18,10 +17,17 @@ function MobileFooter() {
     (ref.current as HTMLDivElement).ownerDocument.body.scrollTop = 0;
   }, [value]);
   return (
-    <Box sx={{ pb: 7 }} ref={ref}>
-      <CssBaseline />
+    <Box
+      // sx={{ pb: 7}}
+      ref={ref}
+    >
       <Paper
-        sx={{ position: "fixed", bottom: 0, left: 0, right: 0 }}
+        sx={{
+          position: "fixed",
+          bottom: 0,
+          left: 0,
+          right: 0,
+        }}
         elevation={3}
       >
         <BottomNavigation
