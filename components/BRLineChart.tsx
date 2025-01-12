@@ -6,7 +6,7 @@ import { Typography } from "@mui/material";
 
 export default function BRLineChart() {
   return (
-    <Card className="w-full m-2 p-0 flex flex-col">
+    <Card className="m-2 p-0 flex flex-col">
       <CardContent>
         <Typography className="pl-1 pt-2" variant="h5">
           物料出入表
