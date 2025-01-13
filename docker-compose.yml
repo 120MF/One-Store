@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:latest
+    container_name: postgres_db
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: onestore
+      POSTGRES_DB: onestore
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./public/public.sql:/docker-entrypoint-initdb.d/public.sql
+    networks:
+      - onestore_network
+
+  app:
+    image: moonfeather/one-store:latest
+    container_name: one_store_app
+    depends_on:
+      - db
+    environment:
+      DATABASE_HOST: db
+      DATABASE_PORT: 5432
+      DATABASE_USER: postgres
+      DATABASE_PASSWORD: onestore
+      DATABASE_NAME: onestore
+    networks:
+      - onestore_network
+
+networks:
+  onestore_network:
+    driver: bridge
+
+volumes:
+  pgdata:
