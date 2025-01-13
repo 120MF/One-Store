@@ -27,6 +27,8 @@ services:
       DATABASE_NAME: onestore
     networks:
       - onestore_network
+    ports:
+      - "3001:3000"
 
 networks:
   onestore_network:
