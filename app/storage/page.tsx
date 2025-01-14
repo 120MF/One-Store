@@ -1,5 +1,9 @@
-import { Typography } from "@mui/material";
+import MaterialDataGrid from "@/components/StoragePage/MaterialDataGrid";
 
 export default function Storage() {
-  return <Typography variant="h1">仓库</Typography>;
+  return (
+    <div className="w-full flex flex-col pt-5 justify-center">
+      <MaterialDataGrid />
+    </div>
+  );
 }
