@@ -1,5 +1,5 @@
 "use client";
-import { DataGrid, GridColDef } from "@mui/x-data-grid";
+import { DataGrid, GridColDef, GridEventListener } from "@mui/x-data-grid";
 import { zhCN } from "@mui/x-data-grid/locales";
 import ComponentCard from "@/components/ComponentCard";
 
@@ -47,6 +47,10 @@ const rows = [
 ];
 
 export default function MaterialDataGrid() {
+  const handleRowClick: GridEventListener<"rowClick"> = (params) => {
+    console.log("Row clicked:", params.row);
+    // Add your custom event handling logic here
+  };
   return (
     <ComponentCard title="物料表" subtitle="通过表格查询库存中的物料">
       <DataGrid
@@ -63,6 +67,7 @@ export default function MaterialDataGrid() {
         pageSizeOptions={[5]}
         checkboxSelection
         disableRowSelectionOnClick
+        onRowClick={handleRowClick}
       />
     </ComponentCard>
   );
