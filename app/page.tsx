@@ -1,6 +1,6 @@
-import BorrowedPieChart from "@/components/BorrowedPieChart";
-import BRLineChart from "@/components/BRLineChart";
-import BRButtonGroup from "@/components/BRButtonShortcut";
+import BorrowedPieChart from "@/components/HomePage/BorrowedPieChart";
+import BRLineChart from "@/components/HomePage/BRLineChart";
+import BRButtonGroup from "@/components/HomePage/BRButtonShortcut";
 
 export default function Home() {
   return (
